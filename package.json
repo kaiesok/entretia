@@ -1,0 +1,22 @@
+{
+  "name": "entretia",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plateforme de simulation d'entretiens d'embauche pilotee par IA",
+  "scripts": {
+    "dev:web": "pnpm --filter @entretia/web dev",
+    "dev:api": "dotnet watch --project apps/api/src/Entretia.Api",
+    "build:web": "pnpm --filter @entretia/web build",
+    "build:api": "dotnet build apps/api/Entretia.sln --configuration Release",
+    "test:api": "dotnet test apps/api/Entretia.sln",
+    "lint": "pnpm --filter @entretia/web lint",
+    "format": "prettier --write \"apps/web/**/*.{ts,tsx,md,json}\"",
+    "db:up": "docker compose up -d",
+    "gen:api-types": "pnpm --filter @entretia/web gen:api-types"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0"
+  },
+  "engines": { "node": ">=20" },
+  "packageManager": "pnpm@9.0.0"
+}

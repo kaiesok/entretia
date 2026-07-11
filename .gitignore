@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.next/
+coverage/
+*.log
+
+# Secrets — ne JAMAIS commiter
+.env
+.env.local
+.env.*.local
+
+# Données locales
+minio-data/
+postgres-data/

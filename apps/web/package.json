@@ -1,0 +1,26 @@
+{
+  "name": "@entretia/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo 'web: pas de tests pour le moment'",
+    "gen:api-types": "openapi-typescript http://localhost:3001/swagger/v1/swagger.json -o src/lib/api-types.ts"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "openapi-typescript": "^6.7.0",
+    "typescript": "^5.5.0"
+  }
+}
